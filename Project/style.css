@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary-color: #4f46e5;
+    --secondary-color: #06b6d4;
+    --accent-color: #ec4899;
+    --bg-dark: #0f172a;
+    --bg-card: rgba(30, 41, 59, 0.7);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Override BS backgrounds */
+.bg-white, .bg-light {
+    background-color: var(--bg-card) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-main) !important;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.text-primary, .text-dark {
+    color: #fff !important;
+}
+
+.bg-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(15, 23, 42, 0.85) !important;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.8rem;
+    background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+}
+
+.nav-link {
+    color: var(--text-main) !important;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 10%;
+    background: var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 80%;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color) !important;
+    transform: translateY(-2px);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background: url('./images/hero_campus.png') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.6), var(--bg-dark));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 3rem;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+    animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    color: #e2e8f0;
+}
+
+.btn-primary-custom {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white !important;
+    font-weight: 600;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 20px rgba(6, 182, 212, 0.3);
+}
+
+.btn-primary-custom:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(6, 182, 212, 0.5);
+}
+
+.btn-outline-light {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    transition: all 0.4s ease;
+}
+
+.btn-outline-light:hover {
+    background: white;
+    color: var(--bg-dark) !important;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Typography and Headings */
+.section-title {
+    color: #fff;
+    font-weight: 800;
+    background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+h3.section-title, h4.section-title, h5.section-title {
+    margin-bottom: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+}
+
+/* Cards */
+.card {
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at top right, rgba(6, 182, 212, 0.1), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(6, 182, 212, 0.2);
+    border-color: rgba(6, 182, 212, 0.3) !important;
+}
+
+.card-header {
+    background: rgba(0,0,0,0.2);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 1.5rem;
+}
+
+.card-body h5 {
+    color: #fff;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.card-body p {
+    color: var(--text-muted);
+}
+
+.card svg {
+    transition: all 0.4s ease;
+    fill: var(--secondary-color);
+}
+
+.card:hover svg {
+    transform: scale(1.15) rotate(5deg);
+    fill: var(--accent-color);
+    filter: drop-shadow(0 0 10px rgba(236, 72, 153, 0.5));
+}
+
+/* Admissions Table */
+.table-custom {
+    color: var(--text-main);
+    border-color: rgba(255, 255, 255, 0.1);
+    background: transparent;
+}
+
+.table-custom th {
+    background: rgba(15, 23, 42, 0.8);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+}
+
+.table-custom td {
+    background: var(--bg-card);
+    border-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+    padding: 15px;
+}
+
+.table-custom tr {
+    transition: all 0.3s ease;
+}
+
+.table-custom tr:hover td {
+    background: rgba(6, 182, 212, 0.1);
+}
+
+/* List group (for admissions) */
+.list-group-item {
+    background: transparent;
+    color: var(--text-main);
+    border-color: rgba(255,255,255,0.1);
+    padding: 1rem 1.25rem;
+}
+
+/* Badges */
+.badge.bg-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+    box-shadow: 0 4px 10px rgba(6, 182, 212, 0.3);
+}
+
+/* Extra elements for spacing/shadows */
+.shadow-sm {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2) !important;
+}
+
+/* Faculty Section */
+.faculty-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    background-clip: padding-box;
+    margin: 0 auto 20px auto;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+/* Wrap faculty image manually in CSS since we can't change HTML */
+.card-body .faculty-img {
+    border: 4px solid rgba(6, 182, 212, 0.5);
+}
+
+.card:hover .faculty-img {
+    transform: scale(1.1) rotate(-3deg);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.4);
+}
+
+/* Detail Pages */
+.detail-header {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(79, 70, 229, 0.7)), url('./images/hero_campus.png') no-repeat center center/cover;
+    color: white;
+    padding: 80px 0;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.detail-header h1 {
+    font-weight: 800;
+    font-size: 3rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    background: linear-gradient(to right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.detail-header p {
+    font-size: 1.25rem;
+    color: #e2e8f0;
+}
+
+/* Footer */
+footer {
+    background: rgba(15, 23, 42, 0.95);
+    color: var(--text-muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem 0;
+}
+
+/* Animations */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Overriding Bootstrap text-center for lists to look fine */
+.list-group {
+    text-align: left;
+}

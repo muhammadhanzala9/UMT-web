@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs | University of Management and Technology</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">UMT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faculty.html">Faculty</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="detail-header text-center">
+        <div class="container">
+            <h1>Academic Programs</h1>
+            <p class="lead text-light mt-3" style="max-width: 600px; margin: auto;">Discover an array of cutting-edge computing programs meticulously crafted to launch you into the forefront of global technology.</p>
+        </div>
+    </div>
+
+    <main class="container py-5 mb-5">
+        
+        <ul class="nav nav-pills justify-content-center mb-5 gap-3" id="programTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="btn btn-outline-light active px-4 py-2 rounded-pill" id="undergrad-tab" data-bs-toggle="tab" data-bs-target="#undergrad" type="button" role="tab" aria-controls="undergrad" aria-selected="true">Undergraduate (BS)</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="btn btn-outline-light px-4 py-2 rounded-pill" id="grad-tab" data-bs-toggle="tab" data-bs-target="#grad" type="button" role="tab" aria-controls="grad" aria-selected="false">Graduate (MS)</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="programTabsContent">
+            
+            <!-- Undergraduate Focus -->
+            <div class="tab-pane fade show active" id="undergrad" role="tabpanel" aria-labelledby="undergrad-tab">
+                <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+                    <h3 class="fw-bold mb-3">Undergraduate Portfolio</h3>
+                    <p class="text-muted">Our four-year BS degree programs lay a rigorous computational foundation integrated with hands-on, problem-solving lab sequences and capstone industry projects.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 p-4 border-0 shadow-sm d-flex flex-column">
+                            <h5 class="fw-bold text-white mb-2">BS Computer Science</h5>
+                            <p class="text-muted small mb-4 flex-grow-1">Learn robust software engineering, scalable algorithms, and the architecture of high-performance computing systems.</p>
+                            <a href="bs-cs.html" class="btn btn-primary-custom mt-auto w-100">View Curriculum</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 p-4 border-0 shadow-sm d-flex flex-column" style="border-top: 3px solid var(--accent-color) !important;">
+                            <h5 class="fw-bold text-white mb-2">BS Artificial Intelligence</h5>
+                            <p class="text-muted small mb-4 flex-grow-1">Dive deep into machine learning, neural networks, robotics, and cognitive systems poised to revolutionize modern life.</p>
+                            <a href="bs-ai.html" class="btn btn-outline-light mt-auto w-100">View Curriculum</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 p-4 border-0 shadow-sm d-flex flex-column">
+                            <h5 class="fw-bold text-white mb-2">BS Cyber Security</h5>
+                            <p class="text-muted small mb-4 flex-grow-1">Master cryptography, ethical hacking, digital forensics, and secure enterprise architecture to defend global endpoints.</p>
+                            <a href="bs-cyber.html" class="btn btn-primary-custom mt-auto w-100">View Curriculum</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 p-4 border-0 shadow-sm d-flex flex-column">
+                            <h5 class="fw-bold text-white mb-2">BS Data Science</h5>
+                            <p class="text-muted small mb-4 flex-grow-1">Harness statistical modeling, big data tools, and analytics to mine intelligence from massive unstructured datasets.</p>
+                            <a href="bs-ds.html" class="btn btn-outline-light mt-auto w-100">View Curriculum</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 p-4 border-0 shadow-sm d-flex flex-column">
+                            <h5 class="fw-bold text-white mb-2">BS Informatics</h5>
+                            <p class="text-muted small mb-4 flex-grow-1">Bridge human psychology, organizational behavior, and UI/UX with modern information technology infrastructure.</p>
+                            <a href="bs-info.html" class="btn btn-primary-custom mt-auto w-100">View Curriculum</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Graduate Focus -->
+            <div class="tab-pane fade" id="grad" role="tabpanel" aria-labelledby="grad-tab">
+                <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+                    <h3 class="fw-bold mb-3">Graduate Studies</h3>
+                    <p class="text-muted">Geared toward active professionals and passionate researchers, our two-year MS programs offer advanced specializations and thesis-driven paths.</p>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-5 col-md-6">
+                        <div class="card h-100 p-4 border-0 shadow-sm d-flex flex-column" style="border-left: 4px solid var(--secondary-color) !important;">
+                            <h5 class="fw-bold text-white mb-2">MS Computer Science</h5>
+                            <p class="text-muted small mb-4 flex-grow-1">Engage in highly theoretical and applied research focusing on complexity, systems design, and bleeding-edge computing architectures.</p>
+                            <a href="ms-cs.html" class="btn btn-primary-custom mt-auto w-100">Explore MSCS</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6">
+                        <div class="card h-100 p-4 border-0 shadow-sm d-flex flex-column" style="border-left: 4px solid var(--accent-color) !important;">
+                            <h5 class="fw-bold text-white mb-2">MS Artificial Intelligence</h5>
+                            <p class="text-muted small mb-4 flex-grow-1">Push the boundaries of NLP, computer vision, and autonomous agents under the guidance of leading research scientists.</p>
+                            <a href="ms-ai.html" class="btn btn-outline-light mt-auto w-100">Explore MSAI</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="pt-5 pb-4 mt-auto">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <h4 class="text-white fw-bold mb-3" style="letter-spacing: 1px;">UMT</h4>
+                    <p class="text-muted pe-lg-4 text-sm">Empowering the next generation of technological leaders through innovation, rigorous academics, and a vibrant diverse community.</p>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h6 class="text-white mb-3 fw-bold">Academics</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="programs.html" class="text-muted text-decoration-none slide-link">Our Programs</a></li>
+                        <li class="mb-2"><a href="faculty.html" class="text-muted text-decoration-none slide-link">Faculty</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none slide-link">Research Centers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h6 class="text-white mb-3 fw-bold">Admissions</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="admissions.html" class="text-muted text-decoration-none slide-link">Apply Now</a></li>
+                        <li class="mb-2"><a href="admissions.html" class="text-muted text-decoration-none slide-link">Tuition & Fees</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none slide-link">Campus Tours</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="text-white mb-3 fw-bold">Stay Connected</h6>
+                    <form class="d-flex mb-3">
+                        <input type="email" class="form-control bg-transparent border-secondary text-white me-2" placeholder="Email address" style="border-radius: 8px;">
+                        <button class="btn btn-primary-custom px-3 py-2" type="button" style="border-radius: 8px;">Subscribe</button>
+                    </form>
+                    <p class="small text-muted mb-0">&copy; 2026 University of Management and Technology. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Optional script to enable tabs cleanly
+        document.querySelectorAll('button[data-bs-toggle="tab"]').forEach(t => {
+            t.addEventListener('shown.bs.tab', function(e) {
+                document.querySelectorAll('button[data-bs-toggle="tab"]').forEach(bt => {
+                    bt.classList.remove('btn-primary-custom');
+                    bt.classList.add('btn-outline-light');
+                });
+                e.target.classList.remove('btn-outline-light');
+                e.target.classList.add('btn-primary-custom');
+            });
+        });
+    </script>
+</body>
+</html>
